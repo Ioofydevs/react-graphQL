@@ -5,7 +5,7 @@ const reviews = [
     date: "2021-01-15",
     customer: "Kun Aguero",
     comment: "Niceeeeeeeeeee",
-    rating: 4.5,
+    rating: 4,
     productId: "cfy-3ez2klmn",
   },
   {
@@ -14,7 +14,7 @@ const reviews = [
     date: "2021-01-15",
     customer: "Valerian Trifa",
     comment: "Gooto",
-    rating: 4.7,
+    rating: 4,
     productId: "cxy-5rw4bcde",
   },
   {

@@ -25,10 +25,9 @@ export const typeDefs = gql`
     quantity: Int!
     price: Float!
     onSale: Boolean!
-    reviews: [Review!]!
-
     # relating data many to one
     category: Category
+    reviews: [Review!]!
   }
 
   type Category {
@@ -45,10 +44,11 @@ export const typeDefs = gql`
     date: String!
     customer: String!
     comment: String!
-    rating: Float!
+    rating: Int!
   }
 
   input ProductsFilterInput {
     onSale: Boolean
+    avgRating: Int
   }
 `;
