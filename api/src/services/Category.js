@@ -1,12 +1,8 @@
-// relating data one to many
-const Category = {
-  products: (parent, { filter }, { products }) => {
-    const { id } = parent;
-
-    const categoryProducts = products.filter(
-      (product) => product.categoryId === id
+exports.Category = {
+  products: ({ id: categoryId }, { filter }, { db }) => {
+    const categoryProducts = db.products.filter(
+      (product) => product.categoryId === categoryId
     );
-
     let filteredCategoryProducts = categoryProducts;
 
     if (filter) {
@@ -22,5 +18,3 @@ const Category = {
     return filteredCategoryProducts;
   },
 };
-
-export default Category;

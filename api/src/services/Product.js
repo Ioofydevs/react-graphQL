@@ -1,11 +1,8 @@
-// relating data many to one
-const Product = {
-  category: ({ categoryId }, args, { categories }) => {
-    return categories.find((category) => category.id === categoryId);
+exports.Product = {
+  category: ({ categoryId }, args, { db }) => {
+    return db.categories.find((category) => category.id === categoryId);
   },
-  reviews: ({ id }, args, { reviews }) => {
-    return reviews.filter((review) => review.productId === id);
+  reviews: ({ id }, args, { db }) => {
+    return db.reviews.filter((review) => review.productId === id);
   },
 };
-
-export default Product;
