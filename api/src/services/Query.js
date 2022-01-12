@@ -32,7 +32,19 @@ const Query = {
     return products.find((product) => product.id === id);
   },
   //return all product
-  products: (parent, args, { products }) => products,
+  products: (parent, { filter }, { products }) => {
+    let filteredProducts = products;
+
+    if (filter) {
+      if (filter.onSale === true) {
+        filteredProducts = filteredProducts.filter((product) => {
+          return product.onSale;
+        });
+      }
+    }
+
+    return filteredProducts;
+  },
   categories: (parent, args, { categories }) => categories,
 
   category: (parent, args, { categories }) => {

@@ -9,7 +9,7 @@ export const typeDefs = gql`
     lengthOfDataFruits: Int
     pricePerFruits: Float
     isExpensive: Boolean
-    products: [Product!]!
+    products(filter: ProductsFilterInput): [Product!]!
     # return single product
     product(id: ID!): Product
     # categories
@@ -36,7 +36,7 @@ export const typeDefs = gql`
     name: String!
 
     # relating data one to many
-    products: [Product!]!
+    products(filter: ProductsFilterInput): [Product!]!
   }
 
   type Review {
@@ -46,5 +46,9 @@ export const typeDefs = gql`
     customer: String!
     comment: String!
     rating: Float!
+  }
+
+  input ProductsFilterInput {
+    onSale: Boolean
   }
 `;
