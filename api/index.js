@@ -4,8 +4,10 @@ import Query from "./src/services/Query.js";
 import Category from "./src/services/Category.js";
 import Product from "./src/services/Product.js";
 
+// dummy database
 import products from "./src/data/products.data.js";
 import categories from "./src/data/categories.data.js";
+import reviews from "./src/data/reviews.data.js";
 
 const server = new ApolloServer({
   typeDefs,
@@ -17,6 +19,7 @@ const server = new ApolloServer({
   context: {
     products,
     categories,
+    reviews,
   },
 });
 
