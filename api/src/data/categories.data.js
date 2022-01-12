@@ -1,10 +1,10 @@
 const categories = [
   {
-    id: "cfx-2204501",
+    id: "4675e598-1bcd-4fd4-88d3-d891d16b9b58",
     name: "Electronic",
   },
   {
-    id: "cxy-4255003",
+    id: "9e818c19-dd1e-4d9c-93e7-18a11a54c97c",
     name: "Sports",
   },
 ];
