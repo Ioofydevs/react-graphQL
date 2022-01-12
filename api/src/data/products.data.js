@@ -29,6 +29,16 @@ const products = [
     image: "/ballmikasa.png",
     categoryId: "cxy-4255003",
   },
+  {
+    id: "cgy-404zzkhj",
+    name: "ASUS Rog Zephyrus II 16GB RAM / 2TB SSD SilverPlate",
+    description: "A badas laptop of the year",
+    quantity: 5,
+    price: 1500,
+    onSale: true,
+    image: "/rogzephyrus2.png",
+    categoryId: "cfx-2204501",
+  },
 ];
 
 export default products;

@@ -44,11 +44,11 @@ export const typeDefs = gql`
     date: String!
     customer: String!
     comment: String!
-    rating: Int!
+    rating: Float!
   }
 
   input ProductsFilterInput {
     onSale: Boolean
-    avgRating: Int
+    avgRating: Float
   }
 `;
